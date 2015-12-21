@@ -1,0 +1,53 @@
+h1 {
+	margin: 0;
+	width: 101px;
+}
+.wrapper {
+	margin: 0;
+	width: 1105px;
+	max-width: 70%;
+	position: relative;
+}
+.obj_2 {
+	margin-top: 330px;
+}
+#square_param, #round_param {
+	color: rgb(66, 66, 66);
+	font-weight: bold;
+}
+#round_param {
+	margin-bottom: 200px;
+}
+#square {
+	background-color: rgb(66, 66, 66);
+	width: 200px;
+	height: 200px;
+	position: absolute;
+}
+#square:hover {
+	border: 1px dotted;
+}
+#round {
+	background-color: rgb(66, 66, 66);
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 720px;
+}
+#round:hover {
+	border: 1px dotted;
+}
+.buttons {
+	margin: 20px 0;
+}
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+li {
+	display: inline-block;
+}
+.JS {
+	display: none;
+}
