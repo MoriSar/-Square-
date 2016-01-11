@@ -35,7 +35,7 @@ function changeFig () {
 	};
 }
 
-window.onload = function () {
+function common () {
 	fig.showParams("square", "square_param");
 	fig.showParams("round", "round_param");
 
@@ -45,3 +45,5 @@ window.onload = function () {
 	eventObj.addEvent(page.getId('h_1'), 'mousemove', h1_crazy);
 	eventObj.addEvent(document, 'click', changeFig);
 }
+
+eventObj.addEvent(window, 'load', common);
