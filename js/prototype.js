@@ -134,10 +134,8 @@ Figure.prototype.changeSize = function(id, p, value, maxSize, minSize) {
 };
 
 Figure.prototype.changeColor = function(id, p) {
-	var text = document.getElementById(p);
 
 	this.getId(id).style.backgroundColor = randomRGBColor();
-	text.style.color = this.getId(id).style.backgroundColor;
 
 	this.showParams(id, p);
 

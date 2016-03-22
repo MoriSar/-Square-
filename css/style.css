@@ -2,13 +2,27 @@ body {
 	background: #AED300 url('../images/background.jpg') repeat;
 }
 h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 80px;
+	color: #efe284;
+	text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+	padding: 74px 0;
+	width: 450px;
+	margin: 0 auto;
+	background: url('../images/bg_text_1.png') no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+p {
 	margin: 0;
+	padding: 0;
 }
 .wrapper {
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
-	width: 1595px;
+	max-width: 1410px;
+	width: 95%;
 }
 .obj_1,.obj_2 {
 	background: url('../images/bg_text_2.png') no-repeat;
@@ -24,28 +38,30 @@ h1 {
 	
 }
 #square_param, #round_param {
-	color: rgb(66, 66, 66);
+	color: #2b200a;
+	font-family: 'Neucha', cursive;
+	font-size: 18px;
 	font-weight: bold;
+	background: url('../images/bg_text_3.png') no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	margin: 0 auto;
+	width: 550px;
+	padding: 12px 0 27px;
 }
 #round_param {
 	margin-bottom: 200px;
 }
-#square {
+#square,#round {
 	background-color: rgb(66, 66, 66);
 	height: 100px;
 	left: 40px;
 	position: absolute;
-	top: 300px;
+	top: 250px;
 	width: 100px;
 }
 #round {
-	background-color: rgb(66, 66, 66);
 	border-radius: 50%;
-	height: 100px;
-	left: 40px;
-	position: absolute;
-	top: 300px;
-	width: 100px;
 }
 #square,#round {
 	border: 3px solid black;
@@ -54,11 +70,12 @@ h1 {
 	cursor: move;
 }
 .buttons {
-	margin: 20px 0;
+	margin-top: 15px;
 }
 ul {
 	padding: 0;
 	list-style-type: none;
+	display: inline-block;
 }
 li {
 	display: inline-block;
@@ -67,23 +84,35 @@ input {
 	color: #efe284;
 	text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
 	font-family: 'Neucha', cursive;
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: bold;
 	text-transform: uppercase;
-	height: 70px;
-	width: 170px;
+	height: 60px;
+	width: 150px;
 }
 .JS {
 	display: none;
 }
 .btn {
 	background: url('../images/bg_btn.png') center no-repeat;
+}
+.btn_reset {
+	background: url('../images/bg_btn_reset.png') center no-repeat;
+}
+.btn,.btn_reset {
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	border: none;
 }
-.btn_reset {
-	background: url('../images/bg_btn_reset.png') center no-repeat;
+.btn:hover {
+	background: url('../images/bg_btn_hover.png') center no-repeat;
+}
+.btn_reset:hover {
+	background: url('../images/bg_btn_reset_hover.png') center no-repeat;
+}
+.btn:hover,.btn_reset:hover {
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	border: none;
+	cursor: pointer;
 }

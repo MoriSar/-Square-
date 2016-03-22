@@ -5,10 +5,10 @@ function changeFig () {
 		return
 
 	} else if (data === 'Увеличить размер квадрата') {
-		fig.changeSize("square", "square_param", 20, 300, 20)
+		fig.changeSize("square", "square_param", 10, 250, 20)
 
 	} else if (data === 'Уменьшить размер квадрата') {
-		fig.changeSize("square", "square_param", -20, 300, 20)
+		fig.changeSize("square", "square_param", -10, 250, 20)
 
 	} else if (data === 'Изменить цвет квадрата') {
 		fig.changeColor("square", "square_param")
