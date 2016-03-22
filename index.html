@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Test JS</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class="wrapper" id="wrapperId">
@@ -11,12 +12,12 @@
     <div class="obj_1">
       <div class="buttons">
         <ul>
-          <li><input type="button" value="Увеличить размер" id="btn_1" data-button="Увеличить размер квадрата"></li>
-          <li><input type="button" value="Уменьшить размер" id="btn_2" data-button="Уменьшить размер квадрата"></li>
+          <li><input type="button" value="Увеличить размер" id="btn_1" data-button="Увеличить размер квадрата" class="btn"></li>
+          <li><input type="button" value="Уменьшить размер" id="btn_2" data-button="Уменьшить размер квадрата" class="btn"></li>
         </ul>
         <ul>
-          <li><input type="button" value="Изменить цвет" id="btn_3" data-button="Изменить цвет квадрата"></li>
-          <li><input type="button" value="Сброс" id="btn_4" data-button="Сброс квадрата"></li>
+          <li><input type="button" value="Изменить цвет" id="btn_3" data-button="Изменить цвет квадрата" class="btn"></li>
+          <li><input type="button" value="Сброс" id="btn_4" data-button="Сброс квадрата" class="btn_reset"></li>
         </ul>
       </div>
       <div id="square_param"></div>
@@ -25,20 +26,20 @@
     <div class="obj_2">
       <div class="buttons">
         <ul>
-          <li><input type="button" value="Увеличить размер" id="btn_5" data-button="Увеличить размер круга"></li>
-          <li><input type="button" value="Уменьшить размер" id="btn_6" data-button="Уменьшить размер круга"></li>
+          <li><input type="button" value="Увеличить размер" id="btn_5" data-button="Увеличить размер круга" class="btn"></li>
+          <li><input type="button" value="Уменьшить размер" id="btn_6" data-button="Уменьшить размер круга" class="btn"></li>
         </ul>
         <ul>
-          <li><input type="button" value="Изменить цвет" id="btn_7" data-button="Изменить цвет круга"></li>
-          <li><input type="button" value="Сброс" id="btn_8" data-button="Сброс круга"></li>
+          <li><input type="button" value="Изменить цвет" id="btn_7" data-button="Изменить цвет круга" class="btn"></li>
+          <li><input type="button" value="Сброс" id="btn_8" data-button="Сброс круга" class="btn_reset"></li>
         </ul>
       </div>
       <div id="round_param"></div>
       <div id="round"></div>
     </div>
   </div>
-  <script src="events.js"></script>
-  <script src="prototype.js"></script>
-  <script src="common.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/prototype.js"></script>
+  <script src="js/common.js"></script>
 </body>
 </html>

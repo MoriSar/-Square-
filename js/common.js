@@ -1,7 +1,3 @@
-function h1_crazy () {
-	fig.changeColor("square", "square_param");
-	fig.changeColor("round", "round_param");
-};
 
 function changeFig () {
 	var data = page.getAttr('data-button');
@@ -42,7 +38,6 @@ function common () {
 	fig.dragNDrop("square");
 	fig.dragNDrop("round");
 
-	eventObj.addEvent(page.getId('h_1'), 'mousemove', h1_crazy);
 	eventObj.addEvent(document, 'click', changeFig);
 }
 

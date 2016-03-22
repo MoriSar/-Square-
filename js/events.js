@@ -20,6 +20,7 @@ var eventObj = {
 	},
 
 	getTarget: function (event) {
+		event = event || window.event;
 		if (typeof event.target !== "undefined") {
 			return event.target; 
 		} else {
