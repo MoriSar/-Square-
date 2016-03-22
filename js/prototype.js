@@ -10,7 +10,7 @@ Page.prototype.getTag = function(tag) {
 };
 
 Page.prototype.getAttr = function(attr) {
-	var target = eventObj.getTarget(event);
+	var target = eventObj.getTarget(window.event);
 	var data = target.getAttribute(attr);
 	
 	return data;
