@@ -1,3 +1,5 @@
+"use strict";
+
 var eventObj = {
 	addEvent: function (e, type, fn) {
 		if (typeof addEventListener !== "undefined") {
@@ -22,10 +24,8 @@ var eventObj = {
 	getTarget: function (event) {
 		event = event || window.event;
 		if (typeof event.target !== "undefined") {
-			console.log("1");
 			return event.target; 
 		} else {
-			console.log("2");
 			return event.srcElement;
 		};
 	},

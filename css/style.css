@@ -66,9 +66,6 @@ p {
 #square,#round {
 	border: 3px solid black;
 }
-#square:hover,#round:hover {
-	cursor: move;
-}
 .buttons {
 	margin-top: 15px;
 }

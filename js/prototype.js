@@ -1,3 +1,5 @@
+"use strict";
+
 function Page () {}
 function Figure () {}
 
@@ -10,7 +12,7 @@ Page.prototype.getTag = function(tag) {
 };
 
 Page.prototype.getAttr = function(attr) {
-	var target = eventObj.getTarget(window.event);
+	var target = eventObj.getTarget(event);
 	var data = target.getAttribute(attr);
 	
 	return data;
@@ -59,52 +61,6 @@ Page.prototype.reset = function(id, p) {
 	text.style.color = "";
 
 	this.showParams(id, p);
-};
-
-Page.prototype.dragNDrop = function(id) {
-	var item = this.getId(id);
-
-	item.onmousedown = function(e) {
-
-		var coords = getCoords(item);
-		var shiftX = e.pageX - coords.left;
-		var shiftY = e.pageY - coords.top;
-
-		item.style.position = 'absolute';
-		document.body.appendChild(item);
-		moveAt(e);
-
-		item.style.zIndex = 1000;
-
-		function moveAt(e) {
-			item.style.left = e.pageX - shiftX + 'px';
-			item.style.top = e.pageY - shiftY + 'px';
-		}
-
-		document.onmousemove = function(e) {
-			moveAt(e);
-		};
-
-		item.onmouseup = function() {
-			document.onmousemove = null;
-			item.onmouseup = null;
-		};
-
-	}
-
-	item.ondragstart = function() {
-		return false;
-	};
-
-	function getCoords(elem) { // кроме IE8-
-		var box = elem.getBoundingClientRect();
-
-		return {
-			top: box.top + pageYOffset,
-			left: box.left + pageXOffset
-		};
-
-	}
 };
 
 Figure.prototype = Object.create(Page.prototype);
