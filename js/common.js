@@ -1,27 +1,10 @@
 "use strict";
 
 (function() {
-	
-	function getBrowserId () {
-		var
-		aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
-		sUsrAg = navigator.userAgent, nIdx = aKeys.length - 1;
-		for (nIdx; nIdx > -1 && sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
-			return nIdx
-	}
 
-	function checkBrowserFirefox() {
-		if (getBrowserId() == 1) {
-			return true
-		}
-	};
-
-	function changeFig () {
-		var data = page.getAttr('data-button');
-		if (!data) {
-			return
-
-		} else if (data === 'Увеличить размер квадрата') {
+	function changeFig (event) {
+		var data = page.getAttr(event, 'data-button');
+		if (data === 'Увеличить размер квадрата') {
 			fig.changeSize("square", "square_param", 10, 250, 20)
 
 		} else if (data === 'Уменьшить размер квадрата') {
@@ -48,16 +31,13 @@
 	}
 
 	function common () {
-		if (getBrowserId() == true) {
-			return alert("Работа этого приложения не поддерживается в браузере Firefox!")
-		} else {
-			fig.showParams("square", "square_param");
-			fig.showParams("round", "round_param");
+		
+		fig.showParams("square", "square_param");
+		fig.showParams("round", "round_param");
 
-			eventObj.addEvent(document, 'click', changeFig);
-		}
+		eventObj.addEvent(document, 'click', changeFig);
+		
 	}
 
 	eventObj.addEvent(window, 'load', common);
-
 })()

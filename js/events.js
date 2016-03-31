@@ -22,11 +22,11 @@ var eventObj = {
 	},
 
 	getTarget: function (event) {
-		event = event || window.event;
+		var event = window.event || event;
 		if (typeof event.target !== "undefined") {
 			return event.target; 
 		} else {
-			return event.srcElement;
+			return evt.srcElement;
 		};
 	},
 

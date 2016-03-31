@@ -11,7 +11,7 @@ Page.prototype.getTag = function(tag) {
 	return document.getElementsByTagName(tag)
 };
 
-Page.prototype.getAttr = function(attr) {
+Page.prototype.getAttr = function(event, attr) {
 	var target = eventObj.getTarget(event);
 	var data = target.getAttribute(attr);
 	
