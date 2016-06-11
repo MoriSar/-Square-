@@ -1,0 +1,8 @@
+{
+  "name": "tempjswebapp",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-core": "^2.4.1"
+  }
+}

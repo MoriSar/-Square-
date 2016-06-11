@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tempJSWebApp</title>
+
+    <!-- Place google fonts here -->
+    <link href='https://fonts.googleapis.com/css?family=Neucha|Lobster' rel='stylesheet' type='text/css'>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" type="text/css" href="styles/fonts.css">
+    <link rel="stylesheet" type="text/css" href="styles/app.css">
+    <link rel="stylesheet" type="text/css" href="styles/media.css">
+    <!-- endbuild -->
+    
+</head>
+<body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <div class>
+          <div class="wrapper" id="wrapperId">
+            <h1 id="h_1">Test JS</h1>
+            <div class="obj_1">
+              <div class="buttons">
+                <ul>
+                  <li><input type="button" value="Увеличить размер" id="btn_1" data-button="Увеличить размер квадрата" class="btn"></li>
+                  <li><input type="button" value="Уменьшить размер" id="btn_2" data-button="Уменьшить размер квадрата" class="btn"></li>
+              </ul>
+              <ul>
+                  <li><input type="button" value="Изменить цвет" id="btn_3" data-button="Изменить цвет квадрата" class="btn"></li>
+                  <li><input type="button" value="Сброс" id="btn_4" data-button="Сброс квадрата" class="btn_reset"></li>
+              </ul>
+          </div>
+          <div id="square_param"></div>
+          <div id="square"></div>
+      </div>
+      <div class="obj_2">
+          <div class="buttons">
+            <ul>
+              <li><input type="button" value="Увеличить размер" id="btn_5" data-button="Увеличить размер круга" class="btn"></li>
+              <li><input type="button" value="Уменьшить размер" id="btn_6" data-button="Уменьшить размер круга" class="btn"></li>
+          </ul>
+          <ul>
+              <li><input type="button" value="Изменить цвет" id="btn_7" data-button="Изменить цвет круга" class="btn"></li>
+              <li><input type="button" value="Сброс" id="btn_8" data-button="Сброс круга" class="btn_reset"></li>
+          </ul>
+      </div>
+      <div id="round_param"></div>
+      <div id="round"></div>
+  </div>
+</div>
+</div>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/events.js"></script>
+<script src="scripts/prototypes.js"></script>
+<script src="scripts/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>
