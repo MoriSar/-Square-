@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function Page () {}
 function Figure () {}
@@ -48,17 +48,17 @@ Page.prototype.showParams = function(id, p) {
 	var bRadius = cssProperties.borderRadius;
 	var params = document.getElementById(p);
 
-	return params.innerHTML = "<p>Текущая ширина объекта: " + width + ".<br>Текущая высота объекта: " + height + ".<br>Текущий цвет фона объекта и цвета строк: " + bgColor + ".</p>";
+	return params.innerHTML = '<p>Текущая ширина объекта: ' + width + '.<br>Текущая высота объекта: ' + height + '.<br>Текущий цвет фона объекта и цвета строк: ' + bgColor + '.</p>';
 };
 
 Page.prototype.reset = function(id, p) {
 	var text = document.getElementById(p);
 
-	this.getId(id).style.width = "";
-	this.getId(id).style.height = "";
-	this.getId(id).style.backgroundColor = "";
-	this.getId(id).style.borderRadius = "";
-	text.style.color = "";
+	this.getId(id).style.width = '';
+	this.getId(id).style.height = '';
+	this.getId(id).style.backgroundColor = '';
+	this.getId(id).style.borderRadius = '';
+	text.style.color = '';
 
 	this.showParams(id, p);
 };
@@ -72,17 +72,17 @@ Figure.prototype.changeSize = function(id, p, value, maxSize, minSize) {
 	var minSize = minSize;
 
 	if (parseInt(cssProperties.width) >= maxSize) {
-		alert("Максимальный размер")
+		alert('Максимальный размер')
 	} else if (parseInt(cssProperties.width) <= minSize) {
-		alert("Минимальынй размер")
+		alert('Минимальынй размер')
 	} else {
 		if (value >= 0) {
-			this.getId(id).style.width = parseInt(cssProperties.width) + value + "px";
-			this.getId(id).style.height = parseInt(cssProperties.height) + value + "px";
+			this.getId(id).style.width = parseInt(cssProperties.width) + value + 'px';
+			this.getId(id).style.height = parseInt(cssProperties.height) + value + 'px';
 		};
 		if (value <= 0) {
-			this.getId(id).style.width = parseInt(cssProperties.width) + value + "px";
-			this.getId(id).style.height = parseInt(cssProperties.height) + value + "px";
+			this.getId(id).style.width = parseInt(cssProperties.width) + value + 'px';
+			this.getId(id).style.height = parseInt(cssProperties.height) + value + 'px';
 		};
 	};
 
@@ -100,7 +100,7 @@ Figure.prototype.changeColor = function(id, p) {
 		var g = randomInteger(0, 255);
 		var b = randomInteger(0, 255);
 
-		return "rgb(" + r + ", " + g + ", " + b + ")";
+		return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 	};
 
 	function randomInteger(min, max) {

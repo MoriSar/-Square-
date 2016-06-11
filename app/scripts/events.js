@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
 var eventObj = (function() {
 	return {
 		addEvent: function (e, type, fn) {
-			if (typeof addEventListener !== "undefined") {
+			if (typeof addEventListener !== 'undefined') {
 				e.addEventListener(type, fn, false);
-			} else if (typeof attachEvent !== "undefined") {
+			} else if (typeof attachEvent !== 'undefined') {
 				e.attachEvent('on' + type, fn);
 			} else {
 				e['on' + type] = fn;
@@ -13,9 +13,9 @@ var eventObj = (function() {
 		},
 
 		removeEvent: function (e, type, fn) {
-			if (typeof removeEventListener !== "undefined") {
+			if (typeof removeEventListener !== 'undefined') {
 				e.removeEventListener(type, fn, false);
-			} else if (typeof attachEvent !== "undefined") {
+			} else if (typeof attachEvent !== 'undefined') {
 				e.detachEvent('on' + type, fn);
 			} else {
 				e['on' + type] = null;
@@ -24,7 +24,7 @@ var eventObj = (function() {
 
 		getTarget: function (event) {
 			var event = window.event || event;
-			if (typeof event.target !== "undefined") {
+			if (typeof event.target !== 'undefined') {
 				return event.target; 
 			} else {
 				return evt.srcElement;
@@ -32,7 +32,7 @@ var eventObj = (function() {
 		},
 
 		preventDefault: function (event) {
-			if (typeof event.preventDefault !== "undefined") {
+			if (typeof event.preventDefault !== 'undefined') {
 				event.preventDefault();
 			} else {
 				event.returnValue = false;
