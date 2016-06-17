@@ -2,42 +2,47 @@
 
 (function() {
 
+	var sys_events = MORISAR.system.events,
+	sys_domCtrl = MORISAR.system.DOMCtrl,
+	fun_paramsViewCtrl = MORISAR.functional.paramsViewCtrl,
+	fun_sizeCrtl = MORISAR.functional.sizeCtrl;
+
 	function changeFig (event) {
-		var data = page.getAttr(event, 'data-button');
+		var data = sys_domCtrl.getAttr(event, 'data-button');
 		if (data === 'Увеличить размер квадрата') {
-			fig.changeSize('square', 'square_param', 10, 250, 20)
+			fun_sizeCrtl.changeSize('square', 'square_param', 10, 250, 20)
 
 		} else if (data === 'Уменьшить размер квадрата') {
-			fig.changeSize('square', 'square_param', -10, 250, 20)
+			fun_sizeCrtl.changeSize('square', 'square_param', -10, 250, 20)
 
 		} else if (data === 'Изменить цвет квадрата') {
-			fig.changeColor('square', 'square_param')
+			fun_sizeCrtl.changeColor('square', 'square_param')
 
 		} else if (data === 'Сброс квадрата') {
-			fig.reset('square', 'square_param')
+			fun_sizeCrtl.resetSize('square', 'square_param')
 
 		} else if (data === 'Увеличить размер круга') {
-			fig.changeSize('round', 'round_param', 10, 200, 20)
+			fun_sizeCrtl.changeSize('round', 'round_param', 10, 200, 20)
 
 		} else if (data === 'Уменьшить размер круга') {
-			fig.changeSize('round', 'round_param', -10, 200, 20)
+			fun_sizeCrtl.changeSize('round', 'round_param', -10, 200, 20)
 
 		} else if (data === 'Изменить цвет круга') {
-			fig.changeColor('round', 'round_param')
+			fun_sizeCrtl.changeColor('round', 'round_param')
 
 		} else if (data === 'Сброс круга') {
-			fig.reset('round', 'round_param')
+			fun_sizeCrtl.resetSize('round', 'round_param')
 		};
 	}
 
 	function common () {
 		
-		fig.showParams('square', 'square_param');
-		fig.showParams('round', 'round_param');
+		fun_paramsViewCtrl.showParams('square', 'square_param');
+		fun_paramsViewCtrl.showParams('round', 'round_param');
 
-		eventObj.addEvent(document, 'click', changeFig);
+		sys_events.addEvent(document, 'click', changeFig);
 		
 	}
 
-	eventObj.addEvent(window, 'load', common);
-})()
+	sys_events.addEvent(window, 'load', common);
+})();
