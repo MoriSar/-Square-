@@ -1,8 +1,8 @@
 'use strict';
 
-MORISAR.namespace('MORISAR.system.events');
+MORISAR.namespace('MORISAR.common.eventObj');
 
-MORISAR.system.events = (function () {
+MORISAR.common.eventObj = (function () {
 	return {
 		addEvent: function (e, type, fn) {
 			if (typeof addEventListener !== 'undefined') {

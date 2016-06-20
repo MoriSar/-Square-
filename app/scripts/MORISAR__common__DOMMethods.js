@@ -1,9 +1,9 @@
 'use strict';
 
-MORISAR.namespace('MORISAR.system.DOMCtrl');
+MORISAR.namespace('MORISAR.common.DOMMethods');
 
-MORISAR.system.DOMCtrl = (function () {
-	var sys_events = MORISAR.system.events;
+MORISAR.common.DOMMethods = (function () {
+	var eventObj = MORISAR.common.eventObj;
 	
 	return {
 
@@ -16,7 +16,7 @@ MORISAR.system.DOMCtrl = (function () {
 		},
 
 		getAttr: function(event, attr) {
-			var target = sys_events.getTarget(event);
+			var target = eventObj.getTarget(event);
 			var data = target.getAttribute(attr);
 
 			return data;
